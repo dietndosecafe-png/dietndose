@@ -269,6 +269,116 @@
     box-shadow: 0 6px 20px rgba(232,137,26,0.25);
   }
 
+  /* ─── AI BANNER ─── */
+  .ai-banner-section {
+    background: var(--cream);
+    padding: 40px 0 20px;
+  }
+  .ai-banner-container {
+    background: var(--forest);
+    border-radius: 24px;
+    padding: 48px 32px;
+    text-align: center;
+    border: 1px solid rgba(255,255,255,0.1);
+    box-shadow: 0 15px 40px rgba(26,58,31,0.15);
+    position: relative;
+    overflow: hidden;
+  }
+  .ai-banner-container::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    border-radius: 24px;
+    box-shadow: inset 0 0 0 2px rgba(255,255,255,0.05);
+    pointer-events: none;
+  }
+  .ai-banner-title {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 5vw, 36px);
+    font-weight: 800;
+    color: var(--sun);
+    margin-bottom: 12px;
+  }
+  .ai-banner-sub {
+    font-size: 15px;
+    color: rgba(255,255,255,0.8);
+    max-width: 700px;
+    margin: 0 auto 32px;
+    line-height: 1.6;
+  }
+  .ai-banner-input-group {
+    display: flex;
+    max-width: 600px;
+    margin: 0 auto 24px;
+    gap: 12px;
+  }
+  .ai-banner-input-group input {
+    flex-grow: 1;
+    padding: 16px 24px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    background: #e9ecea;
+    color: var(--text);
+    outline: none;
+  }
+  .ai-banner-input-group input:focus {
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(232,137,26,0.3);
+  }
+  .ai-banner-input-group button {
+    background: var(--amber);
+    color: #fff;
+    border: none;
+    padding: 0 32px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    font-size: 16px;
+    cursor: pointer;
+    transition: all 0.3s;
+    box-shadow: 0 4px 15px rgba(232,137,26,0.3);
+    white-space: nowrap;
+    z-index: 1;
+  }
+  .ai-banner-input-group button:hover {
+    background: #d97706;
+    transform: translateY(-2px);
+  }
+  .quick-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    max-width: 700px;
+    margin: 0 auto;
+    position: relative;
+    z-index: 1;
+  }
+  .q-tag {
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: rgba(255,255,255,0.9);
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: all 0.2s;
+    font-family: 'Montserrat', sans-serif;
+  }
+  .q-tag:hover {
+    background: rgba(255,255,255,0.15);
+    border-color: var(--sun);
+    color: #fff;
+  }
+  @media (max-width: 600px) {
+    .ai-banner-input-group { flex-direction: column; }
+    .ai-banner-input-group button { padding: 16px; }
+    .ai-banner-container { padding: 32px 20px; }
+  }
+
   /* ─── JUICE CARDS ─── */
   .juice-section { background: var(--cream); }
   .juice-grid {
@@ -787,11 +897,35 @@
 
 <!-- STICKY NAV -->
 <nav class="sticky-nav">
+  <a href="#ask-ai" class="nav-tab">✨ Ask AI</a>
   <a href="#juices" class="nav-tab active">🧃 Fresh Juices</a>
   <a href="#bowls" class="nav-tab">🥣 Super Diet Bowls</a>
   <a href="#salads" class="nav-tab">🥗 Super Salads</a>
   <a href="#subscriptions" class="nav-tab">📅 Subscriptions</a>
 </nav>
+
+<!-- ═══ AI BANNER ═══ -->
+<section id="ask-ai" class="ai-banner-section">
+  <div class="section-wrap">
+    <div class="ai-banner-container fade-in">
+      <h2 class="ai-banner-title">Confused what to order? Ask our AI!</h2>
+      <p class="ai-banner-sub">Tell us your health goals, issues, or cravings, and our Ayurvedic AI Assistant will recommend the perfect diet item or plan for you.</p>
+      
+      <div class="ai-banner-input-group">
+        <input type="text" id="banner-ai-input" placeholder="E.g., I want to lose weight and reduce bloating..." autocomplete="off">
+        <button id="banner-ai-btn">Ask AI</button>
+      </div>
+
+      <div class="quick-tags">
+        <button class="q-tag" data-query="What's good for weight loss?">🔥 Weight Loss</button>
+        <button class="q-tag" data-query="I have acidity and bloating">🧊 Acidity / Bloating</button>
+        <button class="q-tag" data-query="I want glowing skin">✨ Glowing Skin</button>
+        <button class="q-tag" data-query="I need a high protein post-workout meal">💪 Post-Workout</button>
+        <button class="q-tag" data-query="What is best for diabetes?">🩸 Diabetic Friendly</button>
+      </div>
+    </div>
+  </div>
+</section>
 
 <!-- ═══ FRESH JUICES ═══ -->
 <section id="juices" class="juice-section">
@@ -1489,7 +1623,9 @@
   let chatHistory = [];
   
   // Gemini API Configuration
-  const apiKey = ""; // Left empty as requested, Canvas will inject runtime
+  // VERY IMPORTANT FOR LOCAL USE: Get a NEW key from https://aistudio.google.com/
+  // Paste it below ONLY when running on your computer. Keep it "" to test in this preview.
+  const apiKey = "AIzaSyCRRpJ-a7IeAwZWnLXj97cpSRXmNTAarqQ"; 
   const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
 
   const systemPrompt = `You are an AI Ayurvedic Diet Assistant for 'Diet N Dose'. Your job is to help customers choose the right juices, bowls, and salads from our menu based on their health goals or issues.
@@ -1526,6 +1662,36 @@ Instructions:
     if (chatWindow.classList.contains('open')) chatInput.focus();
   });
   closeBtn.addEventListener('click', () => chatWindow.classList.remove('open'));
+
+  // Logic to connect Banner AI elements to the Floating chat
+  const bannerAiInput = document.getElementById('banner-ai-input');
+  const bannerAiBtn = document.getElementById('banner-ai-btn');
+  const quickTags = document.querySelectorAll('.q-tag');
+
+  function triggerChatFromBanner(query) {
+    if (!query) return;
+    chatInput.value = query;
+    if (!chatWindow.classList.contains('open')) {
+      chatWindow.classList.add('open');
+    }
+    chatInput.focus();
+    handleSendMessage();
+    if (bannerAiInput) bannerAiInput.value = ''; // clear banner input
+  }
+
+  if (bannerAiBtn) {
+    bannerAiBtn.addEventListener('click', () => triggerChatFromBanner(bannerAiInput.value.trim()));
+  }
+  if (bannerAiInput) {
+    bannerAiInput.addEventListener('keypress', (e) => {
+      if (e.key === 'Enter') triggerChatFromBanner(bannerAiInput.value.trim());
+    });
+  }
+  quickTags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      triggerChatFromBanner(tag.getAttribute('data-query'));
+    });
+  });
 
   function addMessageToUI(text, sender) {
     const msgDiv = document.createElement('div');
@@ -1566,18 +1732,38 @@ Instructions:
       
       typingIndicator.classList.remove('active');
 
+      // Enhanced Error Handling
+      if (!response.ok) {
+        console.error("API Error Response:", result);
+        chatHistory.pop(); // Remove the failed user message from history
+        
+        // Show specific error messages based on status
+        if (response.status === 400 && result.error?.message?.includes('API key not valid')) {
+            addMessageToUI("Error: The API key is invalid or missing. Please update it in the code.", 'bot');
+        } else if (response.status === 403) {
+            addMessageToUI("Error: Access denied. Your API key might be expired or restricted.", 'bot');
+        } else if (response.status === 503) {
+            addMessageToUI("Our AI assistant is currently very busy helping other customers! Please wait a few moments and try asking again. 🕒", 'bot');
+        } else {
+            addMessageToUI(`Error: Failed to connect to AI (${response.status}). Check console.`, 'bot');
+        }
+        return;
+      }
+
       if (result.candidates && result.candidates[0].content?.parts?.[0]?.text) {
         const botResponse = result.candidates[0].content.parts[0].text;
         addMessageToUI(botResponse, 'bot');
         // Add bot response to history for multi-turn capability
         chatHistory.push({ role: "model", parts: [{ text: botResponse }] });
       } else {
-        addMessageToUI("I'm sorry, I couldn't connect right now. Please try again or WhatsApp us directly at 7982696251.", 'bot');
+        chatHistory.pop();
+        addMessageToUI("I'm sorry, I couldn't formulate a response right now. Please try again.", 'bot');
       }
     } catch (error) {
-      console.error("Gemini API Error:", error);
+      console.error("Fetch Network Error:", error);
       typingIndicator.classList.remove('active');
-      addMessageToUI("Oops! Something went wrong on my end. Please contact us on WhatsApp.", 'bot');
+      chatHistory.pop();
+      addMessageToUI("Oops! A network error occurred. Please check your internet connection.", 'bot');
     }
   }
 

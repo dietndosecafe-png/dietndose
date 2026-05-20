@@ -586,89 +586,6 @@
   .nav-tab:hover { color: #fff; }
   .nav-tab.active { color: var(--sun); border-bottom-color: var(--sun); }
 
-  /* ─── AI BANNER SECTION ─── */
-  .ai-banner-section {
-    padding: 48px 24px;
-    background: linear-gradient(135deg, var(--forest), #112615);
-    color: #fff;
-    text-align: center;
-    position: relative;
-    border-bottom: 4px solid var(--amber);
-  }
-  .ai-banner-content {
-    max-width: 700px;
-    margin: 0 auto;
-  }
-  .ai-banner-content h2 {
-    font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 4vw, 36px);
-    margin-bottom: 12px;
-    color: var(--sun);
-  }
-  .ai-banner-content p {
-    font-size: 15px;
-    color: rgba(255,255,255,0.85);
-    margin-bottom: 28px;
-    line-height: 1.5;
-  }
-  .ai-banner-input-group {
-    display: flex;
-    gap: 10px;
-    max-width: 550px;
-    margin: 0 auto 24px;
-  }
-  .ai-banner-input-group input {
-    flex-grow: 1;
-    padding: 16px 24px;
-    border-radius: 50px;
-    border: none;
-    font-family: 'Montserrat', sans-serif;
-    font-size: 15px;
-    outline: none;
-    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
-  }
-  .ai-banner-input-group input:focus {
-    box-shadow: 0 0 0 3px rgba(232,137,26,0.5);
-  }
-  .ai-banner-input-group button {
-    background: var(--amber);
-    color: #fff;
-    border: none;
-    padding: 0 32px;
-    border-radius: 50px;
-    font-weight: 700;
-    font-size: 15px;
-    cursor: pointer;
-    transition: background 0.2s, transform 0.2s;
-    white-space: nowrap;
-    box-shadow: 0 4px 20px rgba(232,137,26,0.3);
-  }
-  .ai-banner-input-group button:hover {
-    background: var(--brick);
-    transform: translateY(-2px);
-  }
-  .ai-quick-tags {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 10px;
-  }
-  .quick-tag {
-    background: rgba(255,255,255,0.1);
-    border: 1px solid rgba(255,255,255,0.2);
-    color: #fff;
-    padding: 8px 16px;
-    border-radius: 50px;
-    font-size: 13px;
-    cursor: pointer;
-    transition: all 0.2s;
-  }
-  .quick-tag:hover {
-    background: rgba(255,255,255,0.25);
-    border-color: rgba(255,255,255,0.4);
-    transform: translateY(-1px);
-  }
-
   /* ─── ANIMATIONS ─── */
   @keyframes fadeUp {
     from { opacity: 0; transform: translateY(20px); }
@@ -842,8 +759,6 @@
     .sticky-nav::-webkit-scrollbar { display: none; }
     .nav-tab { padding: 12px 14px; font-size: 12px; }
     .subs-card.popular { transform: none; }
-    .ai-banner-input-group { flex-direction: column; }
-    .ai-banner-input-group button { padding: 16px 24px; }
   }
 </style>
 </head>
@@ -872,33 +787,11 @@
 
 <!-- STICKY NAV -->
 <nav class="sticky-nav">
-  <a href="#ai-consult" class="nav-tab active">✨ Ask AI</a>
-  <a href="#juices" class="nav-tab">🧃 Fresh Juices</a>
+  <a href="#juices" class="nav-tab active">🧃 Fresh Juices</a>
   <a href="#bowls" class="nav-tab">🥣 Super Diet Bowls</a>
   <a href="#salads" class="nav-tab">🥗 Super Salads</a>
   <a href="#subscriptions" class="nav-tab">📅 Subscriptions</a>
 </nav>
-
-<!-- ═══ AI CONSULT BANNER ═══ -->
-<section id="ai-consult" class="ai-banner-section">
-  <div class="ai-banner-content fade-in">
-    <h2>Confused what to order? Ask our AI!</h2>
-    <p>Tell us your health goals, issues, or cravings, and our Ayurvedic AI Assistant will recommend the perfect diet item or plan for you.</p>
-    
-    <div class="ai-banner-input-group">
-      <input type="text" id="ai-banner-input" placeholder="E.g., I want to lose weight and reduce bloating..." autocomplete="off">
-      <button id="ai-banner-btn">Ask AI</button>
-    </div>
-    
-    <div class="ai-quick-tags">
-      <button class="quick-tag">🔥 Weight Loss</button>
-      <button class="quick-tag">🫃 Acidity / Bloating</button>
-      <button class="quick-tag">✨ Glowing Skin</button>
-      <button class="quick-tag">💪 Post-Workout</button>
-      <button class="quick-tag">🩸 Diabetic Friendly</button>
-    </div>
-  </div>
-</section>
 
 <!-- ═══ FRESH JUICES ═══ -->
 <section id="juices" class="juice-section">
@@ -1447,16 +1340,16 @@
       
       <!-- Plan 1 -->
       <div class="subs-card fade-in">
-        <h3 class="subs-title">Daily Juice Plan</h3>
+        <h3 class="subs-title">Daily 1-Item Plan</h3>
         <div class="subs-price">₹2,299 <span>/ month</span></div>
         <ul class="subs-features">
-          <li>1 Fresh Therapeutic Juice Daily</li>
+          <li>1 Fresh Juice <strong>OR</strong> 1 Bowl/Salad Daily</li>
           <li>30 Days Delivery (One Month Plan)</li>
-          <li>Choose any juice from our menu</li>
+          <li>Choose any item from our menu</li>
           <li><strong>Free Personalized Diet Plan</strong></li>
           <li>Free morning home delivery</li>
         </ul>
-        <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20subscribe%20to%20the%20Daily%20Juice%20Plan%20(Rs%202299/month)." target="_blank" class="subs-btn">Subscribe Now</a>
+        <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20subscribe%20to%20the%20Daily%201-Item%20Plan%20(Rs%202299/month)." target="_blank" class="subs-btn">Subscribe Now</a>
       </div>
 
       <!-- Plan 2 -->
@@ -1593,11 +1486,6 @@
   const sendBtn = document.getElementById('ai-send-btn');
   const typingIndicator = document.getElementById('typing-indicator');
 
-  // AI Banner Elements
-  const bannerInput = document.getElementById('ai-banner-input');
-  const bannerBtn = document.getElementById('ai-banner-btn');
-  const quickTags = document.querySelectorAll('.quick-tag');
-
   let chatHistory = [];
   
   // Gemini API Configuration
@@ -1623,7 +1511,7 @@ BOWLS & SALADS:
 Provide healthy filling options from our Bowls (like Coconut Milk Oats, Chia Pudding) and Salads (High-protein Paneer, Millet Salad).
 
 SUBSCRIPTIONS (Monthly, 30 days):
-1. Daily Juice Plan (₹2,299/mo) - Includes 1 Juice daily + Free Personalized Diet Plan.
+1. Daily 1-Item Plan (₹2,299/mo) - Includes 1 Juice OR 1 Bowl/Salad daily + Free Personalized Diet Plan.
 2. Juice + Bowl/Salad Plan (₹4,599/mo) - Includes 1 Juice + 1 Bowl/Salad daily + Free Diet Plan & Consultation.
 
 Instructions:
@@ -1699,36 +1587,6 @@ Instructions:
     if (e.key === 'Enter') handleSendMessage();
   });
 
-  // Event Listeners for AI Banner Section
-  function triggerChatWithText(text) {
-    chatInput.value = text;
-    chatWindow.classList.add('open');
-    handleSendMessage();
-  }
-
-  bannerBtn.addEventListener('click', () => {
-    if (bannerInput.value.trim()) {
-      triggerChatWithText(bannerInput.value);
-      bannerInput.value = '';
-    } else {
-      chatWindow.classList.add('open');
-      chatInput.focus();
-    }
-  });
-
-  bannerInput.addEventListener('keypress', (e) => {
-    if (e.key === 'Enter' && bannerInput.value.trim()) {
-      triggerChatWithText(bannerInput.value);
-      bannerInput.value = '';
-    }
-  });
-
-  quickTags.forEach(tag => {
-    tag.addEventListener('click', () => {
-      // Send the text inside the tag (e.g. "🔥 Weight Loss") directly to chat
-      triggerChatWithText("I am looking for: " + tag.innerText);
-    });
-  });
 </script>
 </body>
 </html>

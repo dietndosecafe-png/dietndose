@@ -1,0 +1,1734 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Diet N Dose — Natural Diet, Complete Health</title>
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=Montserrat:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<style>
+  :root {
+    --forest: #1a3a1f;
+    --leaf: #2d6a35;
+    --sage: #4e8c57;
+    --mint: #a8d5ae;
+    --cream: #fcfbf9;
+    --amber: #e68213;
+    --sun: #f5c842;
+    --brick: #c94f2a;
+    --blush: #f7f4ed;
+    --text: #1c1c1c;
+    --muted: #5e5e5e;
+  }
+
+  * { margin: 0; padding: 0; box-sizing: border-box; }
+
+  body {
+    font-family: 'Montserrat', sans-serif;
+    background: var(--cream);
+    color: var(--text);
+    overflow-x: hidden;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  /* ─── NEW LIGHT & AIRY HERO ─── */
+  .hero {
+    background: linear-gradient(135deg, #ffffff 0%, #f4f7f5 100%);
+    position: relative;
+    overflow: hidden;
+    padding: 100px 24px 80px;
+    text-align: center;
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+  }
+  .hero::before {
+    content: '';
+    position: absolute;
+    top: -20%; right: -10%;
+    width: 500px; height: 500px;
+    background: radial-gradient(circle, rgba(232,137,26,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero::after {
+    content: '';
+    position: absolute;
+    bottom: -20%; left: -10%;
+    width: 400px; height: 400px;
+    background: radial-gradient(circle, rgba(78,140,87,0.08) 0%, transparent 70%);
+    border-radius: 50%;
+    pointer-events: none;
+  }
+  .hero-content {
+    position: relative;
+    z-index: 1;
+    max-width: 900px;
+    margin: 0 auto;
+  }
+  .hero-badge {
+    display: inline-flex;
+    align-items: center;
+    background: rgba(232,137,26,0.1);
+    border: 1px solid rgba(232,137,26,0.3);
+    color: #b36200;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 24px;
+    border-radius: 50px;
+    margin-bottom: 24px;
+    animation: fadeUp 0.6s ease both;
+  }
+  .hero h1 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 7vw, 85px);
+    font-weight: 900;
+    color: var(--forest);
+    line-height: 1.1;
+    letter-spacing: -1px;
+    white-space: nowrap;
+    margin-bottom: 16px;
+    animation: fadeUp 0.7s ease 0.1s both;
+  }
+  .hero h1 span { color: var(--amber); }
+  .hero-tagline {
+    font-size: clamp(16px, 4vw, 22px);
+    color: var(--muted);
+    max-width: 600px;
+    margin: 0 auto 32px;
+    line-height: 1.5;
+    animation: fadeUp 0.7s ease 0.2s both;
+  }
+  .hero-pills {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 12px;
+    margin-bottom: 40px;
+    animation: fadeUp 0.7s ease 0.3s both;
+  }
+  .hero-pill {
+    background: #fff;
+    border: 1px solid rgba(0,0,0,0.08);
+    color: var(--forest);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.03);
+    transition: transform 0.2s;
+  }
+  .hero-pill:hover { transform: translateY(-2px); }
+
+  .phone-cta {
+    margin-top: 10px;
+    animation: fadeUp 0.7s ease 0.4s both;
+  }
+  .phone-cta a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: linear-gradient(135deg, var(--amber), #d97706);
+    color: #fff;
+    font-size: 18px;
+    font-weight: 700;
+    padding: 16px 36px;
+    border-radius: 50px;
+    text-decoration: none;
+    box-shadow: 0 10px 30px rgba(232,137,26,0.4);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+  .phone-cta a:hover { transform: translateY(-3px); box-shadow: 0 15px 40px rgba(232,137,26,0.5); }
+
+  /* ─── SECTION HEADER ─── */
+  .section-wrap { max-width: 1100px; margin: 0 auto; padding: 0 24px; }
+  
+  .section-header {
+    text-align: center;
+    padding: 56px 0 36px;
+    position: relative;
+  }
+  .section-header .label {
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 3px;
+    text-transform: uppercase;
+    color: var(--sage);
+    margin-bottom: 10px;
+  }
+  .section-header h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(32px, 5vw, 48px);
+    font-weight: 900;
+    color: var(--forest);
+    line-height: 1.1;
+  }
+  .section-header h2 em {
+    font-style: italic;
+    color: var(--amber);
+  }
+  .section-header .sub {
+    font-size: 15px;
+    color: var(--muted);
+    margin-top: 10px;
+  }
+  .section-divider {
+    width: 48px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--amber), var(--leaf));
+    border-radius: 2px;
+    margin: 14px auto 0;
+  }
+
+  .price-strip {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: var(--forest);
+    color: #fff;
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 50px;
+    margin-top: 14px;
+  }
+  .price-strip .amount {
+    font-size: 20px;
+    font-weight: 800;
+    color: var(--sun);
+  }
+
+  /* ─── UNIFIED CARD HEADERS (JUICES, BOWLS, SALADS) ─── */
+  .product-card-top {
+    background: var(--forest);
+    padding: 20px;
+    position: relative;
+    overflow: hidden;
+  }
+  .product-card-top h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 19px;
+    font-weight: 700;
+    color: #fff;
+    line-height: 1.3;
+    position: relative;
+    z-index: 1;
+    margin: 0;
+  }
+  .card-tag {
+    display: inline-block;
+    background: rgba(255,255,255,0.15);
+    color: var(--mint);
+    font-size: 10px;
+    font-weight: 700;
+    padding: 4px 10px;
+    border-radius: 50px;
+    margin-bottom: 8px;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 1;
+  }
+  .card-watermark {
+    position: absolute;
+    right: -10px;
+    bottom: -15px;
+    font-size: 72px;
+    opacity: 0.15;
+    line-height: 1;
+    z-index: 0;
+    pointer-events: none;
+  }
+
+  /* ─── GENERAL PRODUCT CARDS (Add-to-cart buttons) ─── */
+  .card-order-btn {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+    padding: 12px 16px;
+    background: #fff;
+    border: 1.5px solid var(--amber);
+    color: var(--amber);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 14px;
+    border-radius: 12px;
+    transition: all 0.3s ease;
+    width: 100%;
+  }
+  .card-order-btn:hover {
+    background: var(--amber);
+    color: #fff;
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(232,137,26,0.25);
+  }
+
+  /* ─── JUICE CARDS ─── */
+  .juice-section { background: var(--cream); }
+  .juice-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(300px, 1fr));
+    gap: 20px;
+    padding-bottom: 60px;
+  }
+  .juice-card {
+    background: #fff;
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 2px 20px rgba(0,0,0,0.06);
+    transition: transform 0.25s, box-shadow 0.25s;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+  }
+  .juice-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 40px rgba(0,0,0,0.12);
+  }
+  .juice-body { padding: 16px 22px 22px; flex-grow: 1; display: flex; flex-direction: column; }
+  
+  .juice-for { font-size: 11px; font-weight: 700; letter-spacing: 1.5px; text-transform: uppercase; margin-bottom: 8px; }
+  .juice-for-text { font-size: 13px; color: var(--muted); line-height: 1.6; margin-bottom: 14px; font-style: italic; }
+  .ingredients-label { font-size: 10px; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--muted); margin-bottom: 8px; }
+  .ingredients-tags { display: flex; flex-wrap: wrap; gap: 5px; margin-bottom: 14px; }
+  .tag { font-size: 11px; font-weight: 500; padding: 3px 10px; border-radius: 50px; background: var(--blush); color: var(--forest); border: 1px solid rgba(45,106,53,0.12); }
+  .juice-benefit { display: flex; gap: 8px; flex-wrap: wrap; margin-bottom: auto; }
+  .benefit-badge { display: flex; align-items: center; gap: 4px; font-size: 11px; font-weight: 600; padding: 4px 10px; border-radius: 50px; }
+
+  .j1 { --jc: #2d6a35; --jl: #e8f5e9; }
+  .j2 { --jc: #2e7d32; --jl: #f1f8e9; }
+  .j3 { --jc: #b71c1c; --jl: #ffebee; }
+  .j4 { --jc: #1565c0; --jl: #e3f2fd; }
+  .j5 { --jc: #e65100; --jl: #fff3e0; }
+  .j6 { --jc: #880e4f; --jl: #fce4ec; }
+  .j7 { --jc: #006064; --jl: #e0f7fa; }
+  .j8 { --jc: #4a148c; --jl: #f3e5f5; }
+  .j9 { --jc: #33691e; --jl: #f9fbe7; }
+  .j10 { --jc: #bf360c; --jl: #fbe9e7; }
+
+  .juice-card .juice-for { color: var(--jc); }
+  .benefit-badge { background: var(--jl); color: var(--jc); }
+
+  /* ─── BOWL SECTION ─── */
+  .bowl-section { background: #f0f7f1; }
+  .bowl-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(290px, 1fr)); gap: 20px; padding-bottom: 60px; }
+  .bowl-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.06); transition: transform 0.25s, box-shadow 0.25s; display: flex; flex-direction: column; }
+  .bowl-card:hover { transform: translateY(-5px); box-shadow: 0 10px 40px rgba(0,0,0,0.12); }
+  .bowl-tagline { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--amber); margin: 16px 20px 0; }
+  .bowl-body { padding: 12px 20px 20px; flex-grow: 1; display: flex; flex-direction: column; }
+  .nutrition-bar { display: flex; gap: 10px; background: var(--blush); border-radius: 10px; padding: 10px 14px; margin-bottom: 14px; }
+  .nutr-item { text-align: center; flex: 1; }
+  .nutr-val { font-family: 'Montserrat', sans-serif; font-size: 18px; font-weight: 800; color: var(--forest); line-height: 1; }
+  .nutr-label { font-size: 10px; color: var(--muted); font-weight: 600; margin-top: 2px; text-transform: uppercase; }
+  .nutr-divider { width: 1px; background: rgba(0,0,0,0.08); }
+  .bowl-why { font-size: 13px; color: var(--muted); line-height: 1.7; margin-bottom: 12px; }
+
+  /* ─── SALAD SECTION ─── */
+  .salad-section { background: var(--cream); }
+  .salad-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); gap: 20px; padding-bottom: 60px; }
+  .salad-card { background: #fff; border-radius: 20px; overflow: hidden; box-shadow: 0 2px 20px rgba(0,0,0,0.06); transition: transform 0.25s, box-shadow 0.25s; display: flex; flex-direction: column; }
+  .salad-card:hover { transform: translateY(-5px); box-shadow: 0 10px 40px rgba(0,0,0,0.12); }
+  .salad-body { padding: 18px 20px 20px; flex-grow: 1; display: flex; flex-direction: column; }
+  .salad-nutrition { display: flex; gap: 16px; margin-bottom: 14px; padding-bottom: 14px; border-bottom: 1px solid rgba(0,0,0,0.06); }
+  .sal-stat .val { font-family: 'Montserrat', sans-serif; font-size: 20px; font-weight: 800; color: var(--forest); }
+  .sal-stat .lbl { font-size: 10px; color: var(--muted); font-weight: 600; text-transform: uppercase;}
+  .salad-tagline { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 1px; color: var(--amber); margin-bottom: 8px; }
+
+  /* ─── SUBSCRIPTIONS SECTION ─── */
+  .subs-section { background: #faf9f6; padding-top: 60px; padding-bottom: 20px; border-top: none; }
+  .subs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 40px;
+    padding-bottom: 80px;
+    align-items: stretch;
+  }
+  .subs-card {
+    background: #ffffff;
+    border-radius: 24px;
+    padding: 48px 32px;
+    text-align: center;
+    box-shadow: 0 8px 30px rgba(0,0,0,0.03);
+    position: relative;
+    border: 1px solid #f0f0f0;
+    display: flex;
+    flex-direction: column;
+    transition: all 0.4s cubic-bezier(0.165, 0.84, 0.44, 1);
+  }
+  .subs-card:hover { transform: translateY(-8px); box-shadow: 0 15px 40px rgba(0,0,0,0.06); }
+  .subs-card.popular {
+    background: #ffffff;
+    border: 1.5px solid rgba(232,137,26,0.4);
+    box-shadow: 0 12px 40px rgba(232,137,26,0.08);
+  }
+  @media(min-width: 900px) {
+    .subs-card.popular { transform: scale(1.05); }
+    .subs-card.popular:hover { transform: scale(1.05) translateY(-8px); box-shadow: 0 20px 50px rgba(232,137,26,0.12); }
+  }
+  .subs-badge {
+    position: absolute;
+    top: -16px;
+    left: 50%;
+    transform: translateX(-50%);
+    background: var(--amber);
+    color: #fff;
+    font-size: 11px;
+    font-weight: 800;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    padding: 8px 20px;
+    border-radius: 50px;
+    box-shadow: 0 6px 15px rgba(232,137,26,0.25);
+    border: none;
+  }
+  .subs-title {
+    font-family: 'Playfair Display', serif;
+    font-size: 26px;
+    font-weight: 800;
+    color: var(--forest);
+    margin-bottom: 12px;
+  }
+  .subs-price {
+    font-family: 'Montserrat', sans-serif;
+    font-size: 42px;
+    font-weight: 900;
+    color: var(--forest);
+    margin-bottom: 32px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+  }
+  .subs-price span {
+    font-size: 15px;
+    color: var(--muted);
+    font-weight: 600;
+    text-transform: lowercase;
+  }
+  .subs-features {
+    list-style: none;
+    margin-bottom: 40px;
+    text-align: left;
+    flex-grow: 1;
+    padding: 0 10px;
+  }
+  .subs-features li {
+    font-size: 14px;
+    color: var(--text);
+    margin-bottom: 18px;
+    display: flex;
+    align-items: flex-start;
+    gap: 14px;
+    line-height: 1.5;
+    font-weight: 500;
+  }
+  .subs-features li::before {
+    content: '✓';
+    color: var(--forest);
+    font-weight: 900;
+    font-size: 12px;
+    background: #edf5ef;
+    border: 1px solid rgba(45, 106, 53, 0.1);
+    width: 24px;
+    height: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .subs-btn {
+    display: block;
+    background: #f4f7f5;
+    color: var(--forest);
+    text-decoration: none;
+    padding: 16px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.05);
+  }
+  .subs-card.popular .subs-btn {
+    background: var(--amber);
+    color: #fff;
+    border: none;
+    box-shadow: 0 6px 20px rgba(232,137,26,0.25);
+  }
+  .subs-btn:hover { background: var(--forest); color: #fff; transform: translateY(-2px); }
+  .subs-card.popular .subs-btn:hover { background: #d97706; transform: translateY(-2px); box-shadow: 0 8px 25px rgba(232,137,26,0.35); }
+
+  /* ─── INFO BANNER ─── */
+  .info-banner {
+    background: var(--forest);
+    padding: 48px 24px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  .info-banner::before {
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: radial-gradient(ellipse 80% 100% at 50% 50%, rgba(78,140,87,0.3) 0%, transparent 70%);
+  }
+  .info-banner-grid {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 32px;
+    max-width: 800px;
+    margin: 0 auto;
+    position: relative;
+  }
+  .info-item { text-align: center; color: #fff; }
+  .info-icon {
+    width: 52px;
+    height: 52px;
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 22px;
+    margin: 0 auto 10px;
+  }
+  .info-item strong { display: block; font-size: 15px; font-weight: 600; }
+  .info-item span { font-size: 13px; color: rgba(255,255,255,0.6); }
+
+  /* ─── FOOTER & SOCIAL ─── */
+  .footer { background: #111; padding: 40px 24px; text-align: center; }
+  .footer-brand { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 800; color: #fff; letter-spacing: -1px; }
+  .footer-brand span { color: var(--sun); }
+  .footer-tagline { font-size: 13px; color: rgba(255,255,255,0.4); margin-top: 6px; font-style: italic; }
+  .footer-contact { margin-top: 24px; display: flex; justify-content: center; gap: 16px; flex-wrap: wrap; }
+  .footer-contact a {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    color: #fff;
+    font-weight: 700;
+    font-size: 16px;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+  }
+  .footer-contact a:hover {
+    background: var(--amber);
+    border-color: var(--amber);
+    transform: translateY(-3px);
+    box-shadow: 0 5px 15px rgba(232,137,26,0.3);
+  }
+  
+  .footer-social {
+    display: flex;
+    justify-content: center;
+    gap: 16px;
+    margin-top: 28px;
+  }
+  .footer-social a {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 44px;
+    height: 44px;
+    background: rgba(255,255,255,0.08);
+    border: 1px solid rgba(255,255,255,0.15);
+    border-radius: 50%;
+    color: #fff;
+    transition: all 0.3s ease;
+  }
+  .footer-social a:hover {
+    background: var(--amber);
+    color: #fff;
+    border-color: var(--amber);
+    transform: translateY(-3px);
+  }
+  .footer-social svg { width: 20px; height: 20px; fill: currentColor; }
+  
+  .footer-lic { font-size: 11px; color: rgba(255,255,255,0.25); margin-top: 24px; }
+
+  /* ─── NAV TABS ─── */
+  .sticky-nav {
+    position: sticky;
+    top: 0;
+    z-index: 100;
+    background: rgba(26,58,31,0.97);
+    backdrop-filter: blur(10px);
+    padding: 0 24px;
+    display: flex;
+    justify-content: center;
+    gap: 4px;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .nav-tab {
+    padding: 14px 20px;
+    font-size: 13px;
+    font-weight: 600;
+    color: rgba(255,255,255,0.6);
+    cursor: pointer;
+    border-bottom: 3px solid transparent;
+    transition: all 0.2s;
+    text-decoration: none;
+    white-space: nowrap;
+  }
+  .nav-tab:hover { color: #fff; }
+  .nav-tab.active { color: var(--sun); border-bottom-color: var(--sun); }
+
+  /* ─── AI BANNER SECTION ─── */
+  .ai-banner-section {
+    padding: 48px 24px;
+    background: linear-gradient(135deg, var(--forest), #112615);
+    color: #fff;
+    text-align: center;
+    position: relative;
+    border-bottom: 4px solid var(--amber);
+  }
+  .ai-banner-content {
+    max-width: 700px;
+    margin: 0 auto;
+  }
+  .ai-banner-content h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(24px, 4vw, 36px);
+    margin-bottom: 12px;
+    color: var(--sun);
+  }
+  .ai-banner-content p {
+    font-size: 15px;
+    color: rgba(255,255,255,0.85);
+    margin-bottom: 28px;
+    line-height: 1.5;
+  }
+  .ai-banner-input-group {
+    display: flex;
+    gap: 10px;
+    max-width: 550px;
+    margin: 0 auto 24px;
+  }
+  .ai-banner-input-group input {
+    flex-grow: 1;
+    padding: 16px 24px;
+    border-radius: 50px;
+    border: none;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 15px;
+    outline: none;
+    box-shadow: 0 4px 20px rgba(0,0,0,0.2);
+  }
+  .ai-banner-input-group input:focus {
+    box-shadow: 0 0 0 3px rgba(232,137,26,0.5);
+  }
+  .ai-banner-input-group button {
+    background: var(--amber);
+    color: #fff;
+    border: none;
+    padding: 0 32px;
+    border-radius: 50px;
+    font-weight: 700;
+    font-size: 15px;
+    cursor: pointer;
+    transition: background 0.2s, transform 0.2s;
+    white-space: nowrap;
+    box-shadow: 0 4px 20px rgba(232,137,26,0.3);
+  }
+  .ai-banner-input-group button:hover {
+    background: var(--brick);
+    transform: translateY(-2px);
+  }
+  .ai-quick-tags {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+  }
+  .quick-tag {
+    background: rgba(255,255,255,0.1);
+    border: 1px solid rgba(255,255,255,0.2);
+    color: #fff;
+    padding: 8px 16px;
+    border-radius: 50px;
+    font-size: 13px;
+    cursor: pointer;
+    transition: all 0.2s;
+  }
+  .quick-tag:hover {
+    background: rgba(255,255,255,0.25);
+    border-color: rgba(255,255,255,0.4);
+    transform: translateY(-1px);
+  }
+
+  /* ─── ANIMATIONS ─── */
+  @keyframes fadeUp {
+    from { opacity: 0; transform: translateY(20px); }
+    to   { opacity: 1; transform: translateY(0); }
+  }
+  .fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.5s ease, transform 0.5s ease; }
+  .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+  /* ─── AI CHAT WIDGET ─── */
+  .ai-fab {
+    position: fixed;
+    bottom: 24px;
+    right: 24px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--amber), var(--brick));
+    border: none;
+    border-radius: 50%;
+    box-shadow: 0 4px 20px rgba(232,137,26,0.4);
+    color: white;
+    cursor: pointer;
+    z-index: 999;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: transform 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+  }
+  .ai-fab:hover { transform: scale(1.1) rotate(5deg); }
+  .ai-fab svg { width: 28px; height: 28px; fill: currentColor; }
+  
+  .ai-chat-window {
+    position: fixed;
+    bottom: 100px;
+    right: 24px;
+    width: 350px;
+    max-width: calc(100vw - 48px);
+    background: #fff;
+    border-radius: 20px;
+    box-shadow: 0 10px 40px rgba(0,0,0,0.15);
+    display: flex;
+    flex-direction: column;
+    z-index: 1000;
+    overflow: hidden;
+    opacity: 0;
+    pointer-events: none;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+    border: 1px solid rgba(0,0,0,0.08);
+  }
+  .ai-chat-window.open {
+    opacity: 1;
+    pointer-events: all;
+    transform: translateY(0);
+  }
+  .ai-chat-header {
+    background: var(--forest);
+    color: #fff;
+    padding: 16px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .ai-chat-header h3 {
+    font-family: 'Playfair Display', serif;
+    font-size: 18px;
+    display: flex;
+    align-items: center;
+    gap: 8px;
+  }
+  .close-chat {
+    background: none;
+    border: none;
+    color: rgba(255,255,255,0.7);
+    cursor: pointer;
+    font-size: 24px;
+    line-height: 1;
+  }
+  .close-chat:hover { color: #fff; }
+  .ai-chat-body {
+    height: 350px;
+    padding: 16px;
+    overflow-y: auto;
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    background: var(--cream);
+  }
+  .chat-msg {
+    max-width: 85%;
+    padding: 10px 14px;
+    border-radius: 14px;
+    font-size: 13px;
+    line-height: 1.5;
+  }
+  .chat-msg.bot {
+    background: #fff;
+    color: var(--text);
+    border: 1px solid rgba(0,0,0,0.05);
+    align-self: flex-start;
+    border-bottom-left-radius: 4px;
+  }
+  .chat-msg.user {
+    background: var(--leaf);
+    color: #fff;
+    align-self: flex-end;
+    border-bottom-right-radius: 4px;
+  }
+  .ai-chat-input-area {
+    padding: 12px;
+    background: #fff;
+    border-top: 1px solid rgba(0,0,0,0.05);
+    display: flex;
+    gap: 8px;
+  }
+  .ai-chat-input-area input {
+    flex-grow: 1;
+    border: 1px solid rgba(0,0,0,0.1);
+    background: var(--cream);
+    padding: 10px 14px;
+    border-radius: 50px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 13px;
+    outline: none;
+  }
+  .ai-chat-input-area input:focus { border-color: var(--amber); }
+  .ai-send-btn {
+    background: var(--amber);
+    color: #fff;
+    border: none;
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: background 0.2s;
+  }
+  .ai-send-btn:hover { background: var(--brick); }
+  .ai-send-btn svg { width: 18px; height: 18px; fill: currentColor; }
+  
+  .typing-indicator {
+    display: none;
+    align-self: flex-start;
+    background: #fff;
+    padding: 12px 16px;
+    border-radius: 14px;
+    border-bottom-left-radius: 4px;
+    border: 1px solid rgba(0,0,0,0.05);
+    gap: 4px;
+  }
+  .typing-indicator.active { display: flex; }
+  .dot {
+    width: 6px;
+    height: 6px;
+    background: var(--muted);
+    border-radius: 50%;
+    animation: bounce 1.4s infinite ease-in-out both;
+  }
+  .dot:nth-child(1) { animation-delay: -0.32s; }
+  .dot:nth-child(2) { animation-delay: -0.16s; }
+  @keyframes bounce {
+    0%, 80%, 100% { transform: scale(0); }
+    40% { transform: scale(1); }
+  }
+
+  @media (max-width: 600px) {
+    .hero { padding: 40px 20px 36px; }
+    .juice-grid, .bowl-grid, .salad-grid, .subs-grid { grid-template-columns: 1fr; }
+    .sticky-nav { gap: 0; overflow-x: auto; justify-content: flex-start; scrollbar-width: none; }
+    .sticky-nav::-webkit-scrollbar { display: none; }
+    .nav-tab { padding: 12px 14px; font-size: 12px; }
+    .subs-card.popular { transform: none; }
+    .ai-banner-input-group { flex-direction: column; }
+    .ai-banner-input-group button { padding: 16px 24px; }
+  }
+</style>
+</head>
+<body>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="hero-content">
+    <div class="hero-badge">🌱 100% Natural & Satvik</div>
+    <h1>DIET <span>N</span> DOSE</h1>
+    <p class="hero-tagline">Fresh, Ayurvedic Therapeutic Meals Delivered to Your Doorstep.</p>
+    
+    <div class="hero-pills">
+      <span class="hero-pill">🚫 No Onion / Garlic</span>
+      <span class="hero-pill">🌾 Millet-Forward</span>
+      <span class="hero-pill">📉 Low GI</span>
+      <span class="hero-pill">🥛 Dairy-Free Options</span>
+      <span class="hero-pill">✨ Just ₹80 / Item</span>
+    </div>
+
+    <div class="phone-cta">
+      <a href="https://wa.me/917982696251?text=Hi,%20I%20would%20like%20to%20place%20an%20order." target="_blank">💬 Order via WhatsApp</a>
+    </div>
+  </div>
+</section>
+
+<!-- STICKY NAV -->
+<nav class="sticky-nav">
+  <a href="#ai-consult" class="nav-tab active">✨ Ask AI</a>
+  <a href="#juices" class="nav-tab">🧃 Fresh Juices</a>
+  <a href="#bowls" class="nav-tab">🥣 Super Diet Bowls</a>
+  <a href="#salads" class="nav-tab">🥗 Super Salads</a>
+  <a href="#subscriptions" class="nav-tab">📅 Subscriptions</a>
+</nav>
+
+<!-- ═══ AI CONSULT BANNER ═══ -->
+<section id="ai-consult" class="ai-banner-section">
+  <div class="ai-banner-content fade-in">
+    <h2>Confused what to order? Ask our AI!</h2>
+    <p>Tell us your health goals, issues, or cravings, and our Ayurvedic AI Assistant will recommend the perfect diet item or plan for you.</p>
+    
+    <div class="ai-banner-input-group">
+      <input type="text" id="ai-banner-input" placeholder="E.g., I want to lose weight and reduce bloating..." autocomplete="off">
+      <button id="ai-banner-btn">Ask AI</button>
+    </div>
+    
+    <div class="ai-quick-tags">
+      <button class="quick-tag">🔥 Weight Loss</button>
+      <button class="quick-tag">🫃 Acidity / Bloating</button>
+      <button class="quick-tag">✨ Glowing Skin</button>
+      <button class="quick-tag">💪 Post-Workout</button>
+      <button class="quick-tag">🩸 Diabetic Friendly</button>
+    </div>
+  </div>
+</section>
+
+<!-- ═══ FRESH JUICES ═══ -->
+<section id="juices" class="juice-section">
+  <div class="section-wrap">
+    <div class="section-header fade-in">
+      <p class="label">300ml per Bottle</p>
+      <h2>Fresh <em>Juices</em></h2>
+      <p class="sub">Therapeutic blends crafted by our Ayurvedic dietician</p>
+      <div class="section-divider"></div>
+      <div class="price-strip">Price: <span class="amount">₹80</span> per Bottle</div>
+    </div>
+
+    <div class="juice-grid">
+
+      <!-- J1 -->
+      <div class="juice-card j1 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🌿</div>
+          <span class="card-tag">Juice No. 1</span>
+          <h3>The Immunity Booster</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Heartburn, frequent illness, general detox & digestive reset</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Bottle Gourd</span><span class="tag">Moringa</span><span class="tag">Aloe Vera</span>
+            <span class="tag">Amla</span><span class="tag">Ginger</span><span class="tag">Turmeric</span>
+            <span class="tag">Giloy</span><span class="tag">Mint</span><span class="tag">Coriander</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">🛡️ Immunity</span>
+            <span class="benefit-badge">🔥 Anti-Inflammatory</span>
+            <span class="benefit-badge">🫃 Gut Soothing</span>
+          </div>
+          <!-- WhatsApp Order Button -->
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20The%20Immunity%20Booster%20Juice%20(No.1)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J2 -->
+      <div class="juice-card j2 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🩸</div>
+          <span class="card-tag">Juice No. 2</span>
+          <h3>The Green Blood Builder</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Fatigue, anaemia, blood pressure management</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Wheatgrass</span><span class="tag">Microgreens</span><span class="tag">Moringa</span>
+            <span class="tag">Celery</span><span class="tag">Amla</span><span class="tag">Lemon</span>
+            <span class="tag">Turmeric</span><span class="tag">Ginger</span><span class="tag">Coriander</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">🩸 Blood Builder</span>
+            <span class="benefit-badge">💧 Hydrating</span>
+            <span class="benefit-badge">⚡ Energy</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20The%20Green%20Blood%20Builder%20Juice%20(No.2)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J3 -->
+      <div class="juice-card j3 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🍎</div>
+          <span class="card-tag">Juice No. 3</span>
+          <h3>ABC Power House</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Dull skin, thinning hair, tired eyes & glow boost</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Amla</span><span class="tag">Beetroot</span><span class="tag">Carrot</span>
+            <span class="tag">Ginger</span><span class="tag">Turmeric</span><span class="tag">Coriander</span><span class="tag">Mint</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">✨ Glowing Skin</span>
+            <span class="benefit-badge">💇 Hair Health</span>
+            <span class="benefit-badge">⚡ Metabolism</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20ABC%20Power%20House%20Juice%20(No.3)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J4 -->
+      <div class="juice-card j4 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🥒</div>
+          <span class="card-tag">Juice No. 4</span>
+          <h3>The Gut Cleanse (Detox)</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Ulcers, acidity, weight gain, brain fog</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Ashgourd</span><span class="tag">Amla</span><span class="tag">Turmeric</span>
+            <span class="tag">Ginger</span><span class="tag">Black Pepper</span><span class="tag">Mint</span><span class="tag">Coriander</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">🧊 Cooling</span>
+            <span class="benefit-badge">🫧 Alkaline</span>
+            <span class="benefit-badge">🧠 Brain Clarity</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20The%20Gut%20Cleanse%20Juice%20(No.4)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J5 -->
+      <div class="juice-card j5 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🥕</div>
+          <span class="card-tag">Juice No. 5</span>
+          <h3>The Natural Glow</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Gym-goers, athletes, afternoon energy slump</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Apple</span><span class="tag">Beetroot</span><span class="tag">Carrot</span><span class="tag">Ginger</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">⚡ Instant Energy</span>
+            <span class="benefit-badge">🏃 Endurance</span>
+            <span class="benefit-badge">💪 Recovery</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20The%20Natural%20Glow%20Juice%20(No.5)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J6 -->
+      <div class="juice-card j6 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">❤️</div>
+          <span class="card-tag">Juice No. 6</span>
+          <h3>The Heart Care</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Heart health, cholesterol management, blood purification</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Pomegranate</span><span class="tag">Amla</span><span class="tag">Beetroot</span>
+            <span class="tag">Carrot</span><span class="tag">Tomato</span><span class="tag">Cinnamon</span><span class="tag">Ginger</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">❤️ Heart Protect</span>
+            <span class="benefit-badge">🩺 Cholesterol</span>
+            <span class="benefit-badge">🫀 Antioxidants</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20The%20Heart%20Care%20Juice%20(No.6)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J7 -->
+      <div class="juice-card j7 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">💧</div>
+          <span class="card-tag">Juice No. 7</span>
+          <h3>Kidney Flush</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">UTI, puffiness in face/legs, kidney support</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Carrot</span><span class="tag">Tomato</span><span class="tag">Celery</span>
+            <span class="tag">Lemon</span><span class="tag">Coriander</span><span class="tag">Ginger</span>
+            <span class="tag">Cucumber</span><span class="tag">Wheatgrass</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">🫘 Kidney Love</span>
+            <span class="benefit-badge">💧 Detox</span>
+            <span class="benefit-badge">🔧 Tissue Repair</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Kidney%20Flush%20Juice%20(No.7)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J8 -->
+      <div class="juice-card j8 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🍃</div>
+          <span class="card-tag">Juice No. 8</span>
+          <h3>The Diabetic Care</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Type 2 diabetes, PCOS, insulin resistance, skin breakouts</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Karela</span><span class="tag">Vijaysar</span><span class="tag">Neem</span>
+            <span class="tag">Gurmar</span><span class="tag">Moringa</span><span class="tag">Bottle Gourd</span>
+            <span class="tag">Amla</span><span class="tag">Giloy</span><span class="tag">Turmeric</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">🩸 Blood Sugar</span>
+            <span class="benefit-badge">🔄 Insulin Mgmt</span>
+            <span class="benefit-badge">🌿 PCOS Support</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20The%20Diabetic%20Care%20Juice%20(No.8)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J9 -->
+      <div class="juice-card j9 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🧊</div>
+          <span class="card-tag">Juice No. 9</span>
+          <h3>The Daily Coolant & Digester</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Bloating, indigestion, steady fat loss — safe for daily use</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Bottle Gourd</span><span class="tag">Cucumber</span><span class="tag">Amla</span>
+            <span class="tag">Mint</span><span class="tag">Coriander</span><span class="tag">Turmeric</span><span class="tag">Ginger</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">🧊 Cooling</span>
+            <span class="benefit-badge">🔥 Fat Loss</span>
+            <span class="benefit-badge">😊 Daily Use</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20The%20Daily%20Coolant%20Juice%20(No.9)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- J10 -->
+      <div class="juice-card j10 fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🛡️</div>
+          <span class="card-tag">Juice No. 10</span>
+          <h3>The Infection & Skin Clearer</h3>
+        </div>
+        <div class="juice-body">
+          <p class="juice-for">Best For</p>
+          <p class="juice-for-text">Post-Dengue / Typhoid recovery, fever, stubborn acne</p>
+          <p class="ingredients-label">Ingredients</p>
+          <div class="ingredients-tags">
+            <span class="tag">Chirayta</span><span class="tag">Giloy</span><span class="tag">Moringa</span>
+            <span class="tag">Bottle Gourd</span><span class="tag">Turmeric</span><span class="tag">Coriander</span><span class="tag">Mint</span>
+          </div>
+          <div class="juice-benefit">
+            <span class="benefit-badge">🦠 Anti-Viral</span>
+            <span class="benefit-badge">🫀 Liver Cleanse</span>
+            <span class="benefit-badge">✨ Clear Skin</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20The%20Infection%20Clearer%20Juice%20(No.10)." target="_blank" class="card-order-btn">💬 Order This</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SUPER DIET BOWLS ═══ -->
+<section id="bowls" class="bowl-section">
+  <div class="section-wrap">
+    <div class="section-header fade-in">
+      <p class="label">300g per Bowl</p>
+      <h2>Super Diet <em>Bowls</em></h2>
+      <p class="sub">Dairy-free · High-fiber · Sustained energy all morning</p>
+      <div class="section-divider"></div>
+      <div class="price-strip">Price: <span class="amount">₹80</span> per Bowl</div>
+    </div>
+
+    <div class="bowl-grid">
+
+      <!-- B1 -->
+      <div class="bowl-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🥥</div>
+          <span class="card-tag">Bowl No. 1</span>
+          <h3>Coconut-Makhana Fruit Custard</h3>
+        </div>
+        <p class="bowl-tagline">✨ The Ultimate Healthy Treat!</p>
+        <div class="bowl-body">
+          <div class="nutrition-bar">
+            <div class="nutr-item"><div class="nutr-val">165</div><div class="nutr-label">Calories</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">6.8g</div><div class="nutr-label">Protein</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">26.3g</div><div class="nutr-label">Carbs</div></div>
+          </div>
+          <p class="bowl-why">Steady energy without the sugar crash — incredibly creamy without any dairy, packed with antioxidants.</p>
+          <div class="ingredients-tags">
+            <span class="tag">Coconut-Makhana base</span><span class="tag">Cashews</span><span class="tag">Gond Katira</span>
+            <span class="tag">Fresh Fruits</span><span class="tag">Dry Fruits</span><span class="tag">Super Seeds</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Coconut-Makhana%20Fruit%20Custard%20Bowl." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- B2 -->
+      <div class="bowl-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🍧</div>
+          <span class="card-tag">Bowl No. 2</span>
+          <h3>Gond Katira & Sabja Fruit Bowl</h3>
+        </div>
+        <p class="bowl-tagline">❄️ Super Refreshing — Cool You Right Down!</p>
+        <div class="bowl-body">
+          <div class="nutrition-bar">
+            <div class="nutr-item"><div class="nutr-val">120</div><div class="nutr-label">Calories</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">4.5g</div><div class="nutr-label">Protein</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">18g</div><div class="nutr-label">Carbs</div></div>
+          </div>
+          <p class="bowl-why">Extremely hydrating, great for digestion, and full of fibre. A summer lifesaver!</p>
+          <div class="ingredients-tags">
+            <span class="tag">Gond Katira</span><span class="tag">Sabja Seeds</span>
+            <span class="tag">Mixed Nuts</span><span class="tag">Fresh & Dry Fruits</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Gond%20Katira%20%26%20Sabja%20Bowl." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- B3 -->
+      <div class="bowl-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🥣</div>
+          <span class="card-tag">Bowl No. 3</span>
+          <h3>Coconut Milk Overnight Oats</h3>
+        </div>
+        <p class="bowl-tagline">💪 Creamy · Keeps You Full All Morning!</p>
+        <div class="bowl-body">
+          <div class="nutrition-bar">
+            <div class="nutr-item"><div class="nutr-val">195</div><div class="nutr-label">Calories</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">6.8g</div><div class="nutr-label">Protein</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">28.5g</div><div class="nutr-label">Carbs</div></div>
+          </div>
+          <p class="bowl-why">Great carbs for lasting energy, rich in Omega-3s — won't leave you hungry an hour later.</p>
+          <div class="ingredients-tags">
+            <span class="tag">Rolled Oats</span><span class="tag">Coconut Milk</span>
+            <span class="tag">Dry Fruits</span><span class="tag">Mixed Seeds</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Coconut%20Milk%20Overnight%20Oats." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- B4 -->
+      <div class="bowl-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🍫</div>
+          <span class="card-tag">Bowl No. 4</span>
+          <h3>Cacao, Banana & Coconut Milk Smoothie</h3>
+        </div>
+        <p class="bowl-tagline">🍫 Indulgent Taste — Totally Healthy!</p>
+        <div class="bowl-body">
+          <div class="nutrition-bar">
+            <div class="nutr-item"><div class="nutr-val">218</div><div class="nutr-label">Calories</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">7.5g</div><div class="nutr-label">Protein</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">31.5g</div><div class="nutr-label">Carbs</div></div>
+          </div>
+          <p class="bowl-why">Packed with antioxidants from cacao and potassium for a healthy, guilt-free energy boost.</p>
+          <div class="ingredients-tags">
+            <span class="tag">Pure Cocoa</span><span class="tag">Bananas</span>
+            <span class="tag">Coconut Milk</span><span class="tag">Mixed Nuts</span><span class="tag">Seeds</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Cacao%20Banana%20Smoothie%20Bowl." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- B5 -->
+      <div class="bowl-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🍓</div>
+          <span class="card-tag">Bowl No. 5</span>
+          <h3>Chia Seed & Fruit Puree Pudding</h3>
+        </div>
+        <p class="bowl-tagline">🌟 Secret to Glowing Skin & Happy Stomach!</p>
+        <div class="bowl-body">
+          <div class="nutrition-bar">
+            <div class="nutr-item"><div class="nutr-val">135</div><div class="nutr-label">Calories</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">6.8g</div><div class="nutr-label">Protein</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">16.5g</div><div class="nutr-label">Carbs</div></div>
+          </div>
+          <p class="bowl-why">Packed with Omega-3s, wonderful for digestion, and a natural boost for healthy, glowing skin.</p>
+          <div class="ingredients-tags">
+            <span class="tag">Soaked Chia Seeds</span><span class="tag">Fruity Puree</span>
+            <span class="tag">Roasted Nuts</span><span class="tag">Dry Fruits</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Chia%20Seed%20Pudding%20Bowl." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- B6 -->
+      <div class="bowl-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🥭</div>
+          <span class="card-tag">Bowl No. 6</span>
+          <h3>Mango, Chikoo & Banana Smoothie Bowl</h3>
+        </div>
+        <p class="bowl-tagline">🌴 Like a Tropical Vacation in Your Bowl!</p>
+        <div class="bowl-body">
+          <div class="nutrition-bar">
+            <div class="nutr-item"><div class="nutr-val">245</div><div class="nutr-label">Calories</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">5.2g</div><div class="nutr-label">Protein</div></div>
+            <div class="nutr-divider"></div>
+            <div class="nutr-item"><div class="nutr-val">48.5g</div><div class="nutr-label">Carbs</div></div>
+          </div>
+          <p class="bowl-why">Quick natural energy, plenty of potassium and fibre, plus Vitamin C for your immune system.</p>
+          <div class="ingredients-tags">
+            <span class="tag">Mango</span><span class="tag">Chikoo</span><span class="tag">Banana</span>
+            <span class="tag">Sliced Fruits</span><span class="tag">Almonds</span><span class="tag">Raisins</span><span class="tag">Super Seeds</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Mango%20Chikoo%20Smoothie%20Bowl." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SUPER SALADS ═══ -->
+<section id="salads" class="salad-section">
+  <div class="section-wrap">
+    <div class="section-header fade-in">
+      <p class="label">400g per Bowl</p>
+      <h2>Super <em>Salads</em></h2>
+      <p class="sub">High-protein · Keto-friendly · Muscle nourishment</p>
+      <div class="section-divider"></div>
+      <div class="price-strip">Price: <span class="amount">₹80</span> per Bowl</div>
+    </div>
+
+    <div class="salad-grid">
+
+      <!-- S1 -->
+      <div class="salad-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🌱</div>
+          <span class="card-tag">High-Protein · High-Fiber</span>
+          <h3>Mixed Sprouts & Paneer Veggie Salad</h3>
+        </div>
+        <div class="salad-body">
+          <div class="salad-nutrition">
+            <div class="sal-stat"><div class="val">320</div><div class="lbl">Calories</div></div>
+            <div class="sal-stat"><div class="val">24g</div><div class="lbl">Protein</div></div>
+          </div>
+          <p class="salad-tagline">🌱 Crunchy, Fresh & Packed with Plant Power!</p>
+          <div class="ingredients-tags">
+            <span class="tag">Paneer</span><span class="tag">Sprouted Moong</span><span class="tag">Chana</span>
+            <span class="tag">Soy</span><span class="tag">Chickpeas</span><span class="tag">Broccoli</span>
+            <span class="tag">Bell Peppers</span><span class="tag">Pomegranate</span><span class="tag">Seeds</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Mixed%20Sprouts%20%26%20Paneer%20Salad." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- S2 -->
+      <div class="salad-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🥦</div>
+          <span class="card-tag">Antioxidant · Healthy Fats</span>
+          <h3>Crisp Asian Veggies Salad</h3>
+        </div>
+        <div class="salad-body">
+          <div class="salad-nutrition">
+            <div class="sal-stat"><div class="val">260</div><div class="lbl">Calories</div></div>
+            <div class="sal-stat"><div class="val">18g</div><div class="lbl">Protein</div></div>
+          </div>
+          <p class="salad-tagline">🌈 Incredibly Colorful — Asian-Inspired!</p>
+          <div class="ingredients-tags">
+            <span class="tag">Broccoli</span><span class="tag">Bell Peppers</span><span class="tag">Paneer</span>
+            <span class="tag">Chickpeas</span><span class="tag">Pomegranate</span><span class="tag">Apple</span>
+            <span class="tag">Peanuts</span><span class="tag">Sesame</span><span class="tag">Pumpkin Seeds</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Crisp%20Asian%20Veggies%20Salad." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- S3 -->
+      <div class="salad-card fade-in">
+        <div class="product-card-top">
+          <div class="card-watermark">🌾</div>
+          <span class="card-tag">Complex Carbs · High Fiber</span>
+          <h3>Mixed Veggie & Millet Salad</h3>
+        </div>
+        <div class="salad-body">
+          <div class="salad-nutrition">
+            <div class="sal-stat"><div class="val">360</div><div class="lbl">Calories</div></div>
+            <div class="sal-stat"><div class="val">14g</div><div class="lbl">Protein</div></div>
+          </div>
+          <p class="salad-tagline">🌾 Hearty Grains — Keeps You Going All Day!</p>
+          <div class="ingredients-tags">
+            <span class="tag">Millets</span><span class="tag">Broccoli</span><span class="tag">Bell Peppers</span>
+            <span class="tag">Beets</span><span class="tag">Sweet Corn</span><span class="tag">Apple</span>
+            <span class="tag">Pomegranate</span><span class="tag">Toasted Nuts</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20Mixed%20Veggie%20%26%20Millet%20Salad." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+      <!-- S4 -->
+      <div class="salad-card fade-in">
+        <div class="product-card-top" style="background: #0d2b0d;">
+          <div class="card-watermark">🧀</div>
+          <span class="card-tag">Max Protein · Keto-Friendly</span>
+          <h3>High-Protein Paneer Salad</h3>
+        </div>
+        <div class="salad-body">
+          <div class="salad-nutrition">
+            <div class="sal-stat"><div class="val">420</div><div class="lbl">Calories</div></div>
+            <div class="sal-stat"><div class="val">28g</div><div class="lbl">Protein</div></div>
+          </div>
+          <p class="salad-tagline">💪 The Ultimate Post-Workout Feast!</p>
+          <div class="ingredients-tags">
+            <span class="tag">Large Paneer Chunks</span><span class="tag">Soybeans</span><span class="tag">Chickpeas</span>
+            <span class="tag">Broccoli</span><span class="tag">Bell Peppers</span><span class="tag">Roasted Peanuts</span>
+            <span class="tag">Sesame</span><span class="tag">Pumpkin Seeds</span>
+          </div>
+          <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20order%20High-Protein%20Paneer%20Salad." target="_blank" class="card-order-btn" style="margin-top: auto;">💬 Order This</a>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- ═══ SUBSCRIPTIONS ═══ -->
+<section id="subscriptions" class="subs-section">
+  <div class="section-wrap">
+    <div class="section-header fade-in">
+      <p class="label">Monthly Wellness</p>
+      <h2>Subscription <em>Plans</em></h2>
+      <p class="sub">Invest in your health with our carefully curated monthly packages</p>
+      <div class="section-divider"></div>
+    </div>
+
+    <div class="subs-grid" style="max-width: 800px; margin: 0 auto;">
+      
+      <!-- Plan 1 -->
+      <div class="subs-card fade-in">
+        <h3 class="subs-title">Daily Juice Plan</h3>
+        <div class="subs-price">₹2,299 <span>/ month</span></div>
+        <ul class="subs-features">
+          <li>1 Fresh Therapeutic Juice Daily</li>
+          <li>30 Days Delivery (One Month Plan)</li>
+          <li>Choose any juice from our menu</li>
+          <li><strong>Free Personalized Diet Plan</strong></li>
+          <li>Free morning home delivery</li>
+        </ul>
+        <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20subscribe%20to%20the%20Daily%20Juice%20Plan%20(Rs%202299/month)." target="_blank" class="subs-btn">Subscribe Now</a>
+      </div>
+
+      <!-- Plan 2 -->
+      <div class="subs-card popular fade-in">
+        <div class="subs-badge">Most Popular</div>
+        <h3 class="subs-title">Juice + Bowl/Salad Plan</h3>
+        <div class="subs-price">₹4,599 <span>/ month</span></div>
+        <ul class="subs-features">
+          <li>1 Fresh Juice + 1 Bowl/Salad Daily</li>
+          <li>30 Days Delivery (One Month Plan)</li>
+          <li><strong>Free Personalized Diet Plan</strong></li>
+          <li>Consultation with Dt. RK Singh</li>
+          <li>Complete morning nutrition</li>
+        </ul>
+        <a href="https://wa.me/917982696251?text=Hi,%20I%20want%20to%20subscribe%20to%20the%20Juice%20+%20Bowl/Salad%20Plan%20(Rs%204599/month)." target="_blank" class="subs-btn">Subscribe Now</a>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- INFO BANNER -->
+<section class="info-banner">
+  <div class="info-banner-grid">
+    <div class="info-item">
+      <div class="info-icon">⏰</div>
+      <strong>Morning Delivery</strong>
+      <span>6:00 – 9:00 AM</span>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">👨‍⚕️</div>
+      <strong>Expert Guidance</strong>
+      <span>Dt. RK Singh & Dr. DP Arya</span>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">📋</div>
+      <strong>Free Diet Plan</strong>
+      <span>With Monthly Subscription</span>
+    </div>
+    <div class="info-item">
+      <div class="info-icon">✅</div>
+      <strong>FSSAI Licensed</strong>
+      <span>208226004001612</span>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer class="footer">
+  <div class="footer-brand">DIET <span>N</span> DOSE</div>
+  <p class="footer-tagline">Natural Diet, Complete Health</p>
+  
+  <div class="footer-contact">
+    <a href="tel:7982696251">📞 Call: 7982696251</a>
+    <a href="https://wa.me/917982696251?text=Hi,%20I%20have%20an%20enquiry." target="_blank">💬 WhatsApp Us</a>
+  </div>
+
+  <div class="footer-social">
+    <a href="https://www.facebook.com/profile.php?id=61573677454110" target="_blank" aria-label="Facebook">
+      <svg viewBox="0 0 24 24"><path d="M22 12c0-5.523-4.477-10-10-10S2 6.477 2 12c0 4.991 3.657 9.128 8.438 9.878v-6.987h-2.54V12h2.54V9.797c0-2.506 1.492-3.89 3.777-3.89 1.094 0 2.238.195 2.238.195v2.46h-1.26c-1.243 0-1.63.771-1.63 1.562V12h2.773l-.443 2.89h-2.33v6.988C18.343 21.128 22 16.991 22 12z"/></svg>
+    </a>
+    <a href="https://www.instagram.com/dietndose?igsh=OWF2MGxrOWFndXJi" target="_blank" aria-label="Instagram">
+      <svg viewBox="0 0 24 24"><path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zM12 0C8.741 0 8.333.014 7.053.072 2.695.272.273 2.69.073 7.052.014 8.333 0 8.741 0 12c0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98C8.333 23.986 8.741 24 12 24c3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98C15.668.014 15.259 0 12 0zm0 5.838a6.162 6.162 0 100 12.324 6.162 6.162 0 000-12.324zM12 16a4 4 0 110-8 4 4 0 010 8zm6.406-11.845a1.44 1.44 0 100 2.881 1.44 1.44 0 000-2.881z"/></svg>
+    </a>
+    <a href="https://youtube.com/@dietndose?si=BMtYYW8TgvoIDEL4" target="_blank" aria-label="YouTube">
+      <svg viewBox="0 0 24 24"><path d="M23.498 6.186a3.016 3.016 0 0 0-2.122-2.136C19.505 3.545 12 3.545 12 3.545s-7.505 0-9.377.505A3.017 3.017 0 0 0 .502 6.186C0 8.07 0 12 0 12s0 3.93.502 5.814a3.016 3.016 0 0 0 2.122 2.136c1.871.505 9.376.505 9.376.505s7.505 0 9.377-.505a3.015 3.015 0 0 0 2.122-2.136C24 15.93 24 12 24 12s0-3.93-.502-5.814zM9.545 15.568V8.432L15.818 12l-6.273 3.568z"/></svg>
+    </a>
+  </div>
+
+  <p class="footer-lic">FSSAI Lic. No. 208226004001612 · Sector 87, Faridabad, Haryana</p>
+</footer>
+
+<!-- ═══ AI CHAT ASSISTANT ═══ -->
+<button class="ai-fab" id="ai-fab" aria-label="Open AI Assistant">
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-6.5 12H11v-2.5l-3.5 3.5 1.42 1.42L11 15.34V18h1.5v-2.66l2.08 2.08L16 16l-3.5-3.5V15zM12 6.5l-1.5 1.5 1.42 1.42L9.84 11.5 11.26 12.92 13.34 10.84 14.84 12.34 16.34 10.84 13.5 8 12 9.5V6.5z"/>
+    <text x="12" y="20" font-size="8" text-anchor="middle" fill="white" font-weight="bold" font-family="sans-serif">AI</text>
+  </svg>
+</button>
+
+<div class="ai-chat-window" id="ai-chat-window">
+  <div class="ai-chat-header">
+    <h3>✨ AI Diet Guide</h3>
+    <button class="close-chat" id="close-chat">&times;</button>
+  </div>
+  <div class="ai-chat-body" id="ai-chat-body">
+    <div class="chat-msg bot">
+      Namaste! I am the Diet N Dose AI Assistant. Tell me your health goals or issues (e.g., "I need a post-workout meal" or "I have acidity"), and I'll recommend the perfect item from our menu!
+    </div>
+    <div class="typing-indicator" id="typing-indicator">
+      <div class="dot"></div><div class="dot"></div><div class="dot"></div>
+    </div>
+  </div>
+  <div class="ai-chat-input-area">
+    <input type="text" id="ai-chat-input" placeholder="Ask for a recommendation..." autocomplete="off" />
+    <button class="ai-send-btn" id="ai-send-btn" aria-label="Send Message">
+      <svg viewBox="0 0 24 24"><path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z"/></svg>
+    </button>
+  </div>
+</div>
+
+<script>
+  // Scroll-triggered fade-in
+  const els = document.querySelectorAll('.fade-in');
+  const io = new IntersectionObserver(entries => {
+    entries.forEach((e, i) => {
+      if (e.isIntersecting) {
+        setTimeout(() => e.target.classList.add('visible'), i * 60);
+        io.unobserve(e.target);
+      }
+    });
+  }, { threshold: 0.08 });
+  els.forEach(el => io.observe(el));
+
+  // Nav tab highlight on scroll
+  const sections = document.querySelectorAll('section[id]');
+  const tabs = document.querySelectorAll('.nav-tab');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    sections.forEach(s => {
+      if (window.scrollY >= s.offsetTop - 120) cur = s.id;
+    });
+    tabs.forEach(t => {
+      t.classList.toggle('active', t.getAttribute('href') === '#' + cur);
+    });
+  }, { passive: true });
+
+  // ═══ AI CHATBOT LOGIC (Gemini API) ═══
+  const fabBtn = document.getElementById('ai-fab');
+  const chatWindow = document.getElementById('ai-chat-window');
+  const closeBtn = document.getElementById('close-chat');
+  const chatBody = document.getElementById('ai-chat-body');
+  const chatInput = document.getElementById('ai-chat-input');
+  const sendBtn = document.getElementById('ai-send-btn');
+  const typingIndicator = document.getElementById('typing-indicator');
+
+  // AI Banner Elements
+  const bannerInput = document.getElementById('ai-banner-input');
+  const bannerBtn = document.getElementById('ai-banner-btn');
+  const quickTags = document.querySelectorAll('.quick-tag');
+
+  let chatHistory = [];
+  
+  // Gemini API Configuration
+  const apiKey = ""; // Left empty as requested, Canvas will inject runtime
+  const apiUrl = `https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash-preview:generateContent?key=${apiKey}`;
+
+  const systemPrompt = `You are an AI Ayurvedic Diet Assistant for 'Diet N Dose'. Your job is to help customers choose the right juices, bowls, and salads from our menu based on their health goals or issues.
+  
+Our Menu (All ₹80 per item):
+JUICES:
+1. Immunity Booster (for heartburn, detox)
+2. Green Blood Builder (for fatigue, anaemia)
+3. ABC Power House (for glowing skin, hair)
+4. Gut Cleanse (for acidity, brain fog)
+5. Natural Glow (for instant energy, gym recovery)
+6. Heart Care (for cholesterol)
+7. Kidney Flush (for UTI, puffiness)
+8. Diabetic Care (for blood sugar, PCOS)
+9. Daily Coolant (for bloating, fat loss)
+10. Infection Clearer (post-fever, acne)
+
+BOWLS & SALADS:
+Provide healthy filling options from our Bowls (like Coconut Milk Oats, Chia Pudding) and Salads (High-protein Paneer, Millet Salad).
+
+SUBSCRIPTIONS (Monthly, 30 days):
+1. Daily Juice Plan (₹2,299/mo) - Includes 1 Juice daily + Free Personalized Diet Plan.
+2. Juice + Bowl/Salad Plan (₹4,599/mo) - Includes 1 Juice + 1 Bowl/Salad daily + Free Diet Plan & Consultation.
+
+Instructions:
+- Keep your answers VERY concise, friendly, and conversational (1-2 short paragraphs).
+- Recommend 1 or 2 specific items or plans based on their query.
+- Always encourage them to use the "Order This" buttons or message on WhatsApp (7982696251).
+- Do NOT invent items. Stick strictly to the menu provided.`;
+
+  // Toggle Chat Window
+  fabBtn.addEventListener('click', () => {
+    chatWindow.classList.toggle('open');
+    if (chatWindow.classList.contains('open')) chatInput.focus();
+  });
+  closeBtn.addEventListener('click', () => chatWindow.classList.remove('open'));
+
+  function addMessageToUI(text, sender) {
+    const msgDiv = document.createElement('div');
+    msgDiv.classList.add('chat-msg', sender);
+    msgDiv.innerHTML = text.replace(/\n/g, '<br>'); // Simple line break formatting
+    chatBody.insertBefore(msgDiv, typingIndicator);
+    chatBody.scrollTop = chatBody.scrollHeight;
+  }
+
+  async function handleSendMessage() {
+    const userText = chatInput.value.trim();
+    if (!userText) return;
+
+    // Add user message to UI
+    addMessageToUI(userText, 'user');
+    chatInput.value = '';
+    
+    // Show typing indicator
+    typingIndicator.classList.add('active');
+    chatBody.scrollTop = chatBody.scrollHeight;
+
+    // Prepare history for API
+    chatHistory.push({ role: "user", parts: [{ text: userText }] });
+
+    const payload = {
+      contents: chatHistory,
+      systemInstruction: { parts: [{ text: systemPrompt }] },
+    };
+
+    try {
+      const response = await fetch(apiUrl, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload)
+      });
+      
+      const result = await response.json();
+      
+      typingIndicator.classList.remove('active');
+
+      if (result.candidates && result.candidates[0].content?.parts?.[0]?.text) {
+        const botResponse = result.candidates[0].content.parts[0].text;
+        addMessageToUI(botResponse, 'bot');
+        // Add bot response to history for multi-turn capability
+        chatHistory.push({ role: "model", parts: [{ text: botResponse }] });
+      } else {
+        addMessageToUI("I'm sorry, I couldn't connect right now. Please try again or WhatsApp us directly at 7982696251.", 'bot');
+      }
+    } catch (error) {
+      console.error("Gemini API Error:", error);
+      typingIndicator.classList.remove('active');
+      addMessageToUI("Oops! Something went wrong on my end. Please contact us on WhatsApp.", 'bot');
+    }
+  }
+
+  // Event Listeners for Send
+  sendBtn.addEventListener('click', handleSendMessage);
+  chatInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') handleSendMessage();
+  });
+
+  // Event Listeners for AI Banner Section
+  function triggerChatWithText(text) {
+    chatInput.value = text;
+    chatWindow.classList.add('open');
+    handleSendMessage();
+  }
+
+  bannerBtn.addEventListener('click', () => {
+    if (bannerInput.value.trim()) {
+      triggerChatWithText(bannerInput.value);
+      bannerInput.value = '';
+    } else {
+      chatWindow.classList.add('open');
+      chatInput.focus();
+    }
+  });
+
+  bannerInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter' && bannerInput.value.trim()) {
+      triggerChatWithText(bannerInput.value);
+      bannerInput.value = '';
+    }
+  });
+
+  quickTags.forEach(tag => {
+    tag.addEventListener('click', () => {
+      // Send the text inside the tag (e.g. "🔥 Weight Loss") directly to chat
+      triggerChatWithText("I am looking for: " + tag.innerText);
+    });
+  });
+</script>
+</body>
+</html>

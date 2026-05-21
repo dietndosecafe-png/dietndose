@@ -1,0 +1,5 @@
+[[redirects]]
+  from = "/api/gemini"
+  to = "https://generativelanguage.googleapis.com/v1beta/models/gemini-3-flash:generateContent?key=:env_GEMINI_API_KEY"
+  status = 200
+  force = true
